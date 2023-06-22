@@ -1,6 +1,6 @@
 <?php
 
-$db = mysqli_connect('localhost', 'root', '','phpintermedio', 3307);
+include('conexion.php');
 $stmt = mysqli_stmt_init($db);
 
 $query = "INSERT INTO pedidos (codigo, descripcion, total, cantidad, estado, usuario_id, imagen_recibo) VALUES (?, ?, ?, ?, 'En Progreso', 1, ?)";

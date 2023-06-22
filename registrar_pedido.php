@@ -14,7 +14,11 @@ if (!isset($_SESSION['user'])){
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Food Fast!</title>
+    <link rel="stylesheet" href="assets/styles/styles.css"/>
     <link href="assets/img/favicon/favicon.ico" rel="icon"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 <body>
@@ -23,7 +27,7 @@ if (!isset($_SESSION['user'])){
 </header>
 <nav class="navbar bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
     <div class="container-fluid">
-        <a class="navbar-brand">Food Fast!</a>
+        <a class="navbar-brand" href="mostrar_contenido.php"><img src="assets/img/favicon/android-chrome-192x192.png" id="logo-img" alt="logo hamburguesa"/><span id="logo-text">Food Fast!</span></a>
         <a href="logout.php"> <button class="btn btn-outline-danger" type="submit">Logout</button></a>
     </div>
 </nav>
@@ -40,8 +44,8 @@ if (!isset($_SESSION['user'])){
                 <!--Código -->
                 <label for="codigo">Comida/Combo</label>
                 <div>
-                    <select class="form-select" aria-label="Comida" id="codigo" name="codigo">
-                        <option selected>Seleccionar opción</option>
+                    <select class="form-select" aria-label="Comida" id="codigo" name="codigo" required>
+                        <option selected disabled value="">Seleccionar opción</option>
                         <option value="BUR1">Hamburguesa Cheddar con Papas Fritas y Bebida</option>
                         <option value="BUR2">Hamburguesa Completa con Papas Fritas y Bebida</option>
                         <option value="BUR3">Hamburguesa Bacon con Papas Fritas y Bebida</option>
@@ -60,27 +64,27 @@ if (!isset($_SESSION['user'])){
                 <!-- Cantidad -->
                 <label for="cantidad">Cantidad</label>
                 <div class="mb-3">
-                    <input type="number" class="form-control" aria-label="Cantidad" id="cantidad" name="cantidad">
+                    <input type="number" class="form-control" aria-label="Cantidad" id="cantidad" name="cantidad" required>
                 </div>
 
                 <!-- Archivo -->
                 <div class="mb-3">
                     <label for="reciboimagen" class="form-label">Recibo Imagen</label>
-                    <input class="form-control" type="file" id="reciboimagen" name="reciboimagen">
+                    <input class="form-control" type="file" id="reciboimagen" name="reciboimagen" required>
                 </div>
 
                 <!-- Total -->
                 <label for="total">Total</label>
                 <div class="input-group mb-3">
                     <span class="input-group-text">$</span>
-                    <input type="text" class="form-control" aria-label="Total" id="total" name="total">
+                    <input type="text" class="form-control" aria-label="Total" id="total" name="total" required>
                     <span class="input-group-text">.00</span>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Registrar</button>
             </form>
             <br>
-            <a href="http://localhost:8080/foodfast/mostrar_contenido.php"><button type="button" class="btn btn-light">Volver</button></a>
+            <a href="mostrar_contenido.php"><button type="button" class="btn btn-light">Volver</button></a>
 
         </div>
 

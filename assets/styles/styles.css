@@ -1,0 +1,28 @@
+#logo-img {
+    height: 3rem;
+    width: 3rem;
+    padding: 7px;
+    margin: 2px;
+}
+
+#logo-text {
+    font-family: 'Montserrat', sans-serif;
+    padding: 5px;
+}
+
+body{
+    min-height: 100vh; margin:0;
+}
+
+
+footer{
+    min-height:50px; background:PapayaWhip;
+}
+
+/* The article fills all the space between header & footer */
+body{
+    display:flex; flex-direction:column;
+}
+article {
+    flex:1;
+}

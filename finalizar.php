@@ -5,7 +5,7 @@ if(isset($_POST)){
     $id = (int)$pedido['id'];
 
     var_dump($pedido);
-    $db = mysqli_connect("localhost", "root", "", "phpintermedio", 3307);
+    include('conexion.php');
     $stmt = mysqli_stmt_init($db);
     mysqli_stmt_prepare($stmt, "UPDATE pedidos SET estado = 'Finalizado' WHERE id = ?");
     mysqli_stmt_bind_param($stmt, "i", $id);

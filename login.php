@@ -6,7 +6,7 @@ $password = $_POST['password'];
 
 $encrypted_password = md5($password);
 
-$db = mysqli_connect('localhost', 'root', '', 'phpintermedio', 3307);
+include('conexion.php');
 
 $stmt = mysqli_stmt_init($db);
 mysqli_stmt_prepare($stmt, "SELECT username FROM usuarios WHERE username = ? AND password = ?");
