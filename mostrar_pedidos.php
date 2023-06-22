@@ -87,7 +87,7 @@ if (!isset($_SESSION['user'])){
                     }
                     echo "<td>$p[2]</td>";
                     echo "<td>$p[3]</td>";
-                    echo "<td>$p[5]</td>";
+                    echo "<td>$p[6]</td>";
                     echo "<td><img src='$p[7]' alt='recibo' class='img-fluid'/></td>";
                     echo "<td>$$p[4]</td>";
                     echo $p[3] == "En Progreso" ? "<td><button class='btn btn-danger' type='button' id='$p[0]'>Finalizar</button></td>" : "<td><button class='btn btn-danger' type='button' id='$p[0]' disabled>Finalizar</button></td>";
