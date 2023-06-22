@@ -4,7 +4,7 @@ session_start();
 if (!isset($_SESSION['user'])){
     header('Location: index.php');
 }
-
+HOla
 ?>
 <!doctype html>
 <html lang="en">
