@@ -41,7 +41,6 @@ if (!isset($_SESSION['user'])){
     <section>
         <div class="container mb-3 bg-warning my-3 p-3 rounded">
             <form action="cargar_pedido.php" method="post" enctype="multipart/form-data">
-                <!--Código -->
                 <label for="codigo">Comida/Combo</label>
                 <div>
                     <select class="form-select" aria-label="Comida" id="codigo" name="codigo" required>
@@ -56,24 +55,20 @@ if (!isset($_SESSION['user'])){
                         <option value="HEL3">Helado Combinado</option>
                     </select>
                 </div>
-                <!--Descripcion -->
                 <div class="mb-3">
                     <label for="Descripcion" class="form-label">Descripcion</label>
                     <textarea class="form-control" id="descripcion" rows="3" name="descripcion"></textarea>
                 </div>
-                <!-- Cantidad -->
                 <label for="cantidad">Cantidad</label>
                 <div class="mb-3">
                     <input type="number" class="form-control" aria-label="Cantidad" id="cantidad" name="cantidad" required>
                 </div>
 
-                <!-- Archivo -->
                 <div class="mb-3">
                     <label for="reciboimagen" class="form-label">Recibo Imagen</label>
                     <input class="form-control" type="file" id="reciboimagen" name="reciboimagen" required>
                 </div>
 
-                <!-- Total -->
                 <label for="total">Total</label>
                 <div class="input-group mb-3">
                     <span class="input-group-text">$</span>
@@ -124,7 +119,6 @@ if (!isset($_SESSION['user'])){
         © 2023 Copyright:
         Mathias Alejandro Salva
     </div>
-    <!-- Copyright -->
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
@@ -132,6 +126,4 @@ if (!isset($_SESSION['user'])){
 </html>
 
 <?php
-//TODO: Agregar logs con file management
-//TODO: Agregar imagen (manejo de imagen o envio de imagen)
 ?>

@@ -132,7 +132,6 @@ if (!isset($_SESSION['user'])){
         © 2023 Copyright:
         Mathias Alejandro Salva
     </div>
-    <!-- Copyright -->
 </footer>
 
 
